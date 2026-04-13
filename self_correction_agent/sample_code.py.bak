@@ -1,0 +1,10 @@
+def main():
+    a = 5
+    b = "10"
+    
+    print("The sum is: ")
+    # Intentional bug: adding int to str
+    print(a + b)
+
+if __name__ == "__main__":
+    main()
