@@ -1,0 +1,4 @@
+rich
+groq
+fastapi
+pydantic

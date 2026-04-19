@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8F113B;
+  --color-primary-light: #b3154a;
+  --color-primary-dark: #6b0c2c;
+  --color-background-dark: #0f172a;
+  --color-surface: #1e293b;
+  --color-neon-blue: #00ffff;
+  --color-neon-green: #00ff99;
+}
+
+@layer utilities {
+  .neon-border {
+    box-shadow: 0 0 10px var(--color-neon-blue);
+    border: 1px solid var(--color-neon-blue);
+  }
+  
+  .neon-border-green {
+    box-shadow: 0 0 10px var(--color-neon-green);
+    border: 1px solid var(--color-neon-green);
+  }
+  
+  .neon-border-red {
+    box-shadow: 0 0 10px var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+
+  .neon-text-glow {
+    text-shadow: 0 0 8px var(--color-neon-blue);
+  }
+}
+
+body {
+  background-color: var(--color-background-dark);
+  color: #fff;
+}
