@@ -65,11 +65,6 @@ User → Frontend (Next.js) → Backend (FastAPI)
 
 * Groq API
 
-### Other Tools
-
-* Subprocess module
-* CORS Middleware
-
 ---
 
 ## API
@@ -95,6 +90,113 @@ User → Frontend (Next.js) → Backend (FastAPI)
 ```
 
 ---
+
+
+## Setup & Installation
+
+### Prerequisites
+
+Make sure you have:
+
+* Python 3.8+
+* Node.js (v18+ recommended)
+* npm or yarn
+* Groq API Key
+* Uvicorn
+
+---
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+```
+
+---
+
+### 2. Backend Setup (FastAPI)
+
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate it
+# Mac/Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
+### 3. Set Environment Variables
+
+Create a `.env` file or export manually:
+
+```bash
+export GROQ_API_KEY="your_api_key_here"
+```
+
+(Yeah… without this your AI becomes emotionally unavailable)
+
+---
+
+### 4. Frontend Setup (Next.js)
+
+```bash
+cd frontend
+npm install
+cd ..
+```
+
+---
+
+## Running the Application
+
+You need **two terminals**.
+
+---
+
+### Terminal 1 — Start Backend
+
+```bash
+source .venv/bin/activate
+uvicorn self_correction_agent.api_server:app --reload --port 8000
+```
+
+Backend runs at:
+`http://localhost:8000`
+
+---
+
+### Terminal 2 — Start Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+Frontend runs at:
+`http://localhost:3000`
+
+---
+
+## How to Use
+
+1. Open `http://localhost:3000`
+2. Paste your Python code
+3. Click **Run & Debug**
+4. See:
+
+   * Error output
+   * AI-corrected code
 
 ## Features
 
@@ -145,7 +247,7 @@ User → Frontend (Next.js) → Backend (FastAPI)
 
 ## Conclusion
 
-This project shows how AI can move debugging from a manual struggle to an automated, intelligent workflow—saving time and actually helping developers learn instead of just fixing errors blindly.
+This project shows how AI can move debugging from a manual struggle to an automated, intelligent workflow saving time and actually helping developers learn instead of just fixing errors blindly.
 
 ---
 
