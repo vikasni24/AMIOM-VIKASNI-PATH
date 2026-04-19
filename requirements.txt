@@ -1,0 +1,5 @@
+rich
+groq
+fastapi
+pydantic
+uvicorn
